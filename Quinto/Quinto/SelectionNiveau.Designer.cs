@@ -42,6 +42,7 @@
             this.btnJouer.TabIndex = 3;
             this.btnJouer.Text = "Jouer !";
             this.btnJouer.UseVisualStyleBackColor = true;
+            this.btnJouer.Click += new System.EventHandler(this.btnJouer_Click);
             // 
             // rdbFacile
             // 

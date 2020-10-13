@@ -30,5 +30,12 @@ namespace Quinto
             Lexique.Instance().Show();
             Lexique.Instance().Activate();
         }
+
+        private void scoresToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Scores.Instance().MdiParent = this;
+            Scores.Instance().Show();
+            Scores.Instance().Activate();
+        }
     }
 }

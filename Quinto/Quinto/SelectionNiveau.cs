@@ -25,9 +25,11 @@ namespace Quinto
             }
             return singleSelectionNiveau; 
         }
-        
-      
 
-
+        private void btnJouer_Click(object sender, EventArgs e)
+        {
+            Jeu.Instance().Show();
+            Jeu.Instance().Activate();
+        }
     }
 }

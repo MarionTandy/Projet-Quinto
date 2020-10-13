@@ -12,10 +12,22 @@ namespace Quinto
 {
     public partial class Scores : Form
     {
-        public Scores()
+        private Scores()
         {
             InitializeComponent();
         }
+
+        private static Scores singleScores = null;
+
+        public static Scores Instance()
+        {
+            if (singleScores == null)
+            {
+                singleScores = new Scores();
+            }
+            return singleScores;
+        }
+
 
         private void label1_Click(object sender, EventArgs e)
         {
