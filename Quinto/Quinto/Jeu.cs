@@ -16,15 +16,16 @@ namespace Quinto
         {
             InitializeComponent();
             lblEssais.Text = essaisRestants.ToString();
-            lblNbErreurs.Text = nbErreurs.ToString(); 
-           
+            lblNbErreurs.Text = nbErreurs.ToString();
+            
+
         }
         string MotATrouver;
         int essaisRestants;
-        int nbErreurs; 
+        int nbErreurs;
+        string[] strArr = { "bateau", "chaise", "framboise", "catapulte", "montagne", "stylo" };
 
-
-
+        #region Singleton
         private static Jeu singleJeu = null;
         public static Jeu Instance()
         {
@@ -34,24 +35,47 @@ namespace Quinto
             }
             return singleJeu;
         }
+        private void Jeu_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            singleJeu = null;
+        }
+        #endregion
 
+
+        #region Evennements
         private void bu_Click(object sender, EventArgs e)
         {
             Button button = sender as Button;
-           
-            foreach (char c in MotATrouver)
+            lstLettres.Items.Add(button.Text);
+
+            /*for (int i = 0; i < MotATrouver.Length; i++)
             {
-                if (c.Equals(button.Text))
+                /*if (MotATrouver[i].Equals(button.Text))
                 {
-                    int j = c;
-                    txtMotATrouver.Text.Replace(txtMotATrouver.Text[j], MotATrouver[c]);
+                    int j = i;
+                    string replacement = txtMotATrouver.Text.Replace(txtMotATrouver.Text[j], MotATrouver[i]);
+
                 }
                 else
                 {
                     essaisRestants--;
-                    nbErreurs++; 
-                }
+                    nbErreurs++;
+                }*/
+           
+  
+        }
+        private void btnStart_Click(object sender, EventArgs e)
+        {
+            Random rand = new Random();
+            MotATrouver += strArr[rand.Next(strArr.Length)];
+            foreach (char c in MotATrouver)
+            {
+                txtMotATrouver.Text += "_ "; 
             }
         }
+
+        #endregion
+
+
     }
 }

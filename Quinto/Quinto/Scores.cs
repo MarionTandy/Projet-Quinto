@@ -17,8 +17,10 @@ namespace Quinto
             InitializeComponent();
         }
 
-        private static Scores singleScores = null;
 
+
+        #region Singleton
+        private static Scores singleScores = null;
         public static Scores Instance()
         {
             if (singleScores == null)
@@ -27,11 +29,19 @@ namespace Quinto
             }
             return singleScores;
         }
+        private void Scores_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            singleScores = null;
+        }
+        #endregion
 
-
+        #region Evennements
         private void label1_Click(object sender, EventArgs e)
         {
 
         }
+
+        #endregion
+
     }
 }

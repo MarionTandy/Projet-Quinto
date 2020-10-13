@@ -15,8 +15,12 @@ namespace Quinto
         private Lexique()
         {
             InitializeComponent();
+            string[] strArr = { "bateau", "chaise", "framboise", "catapulte", "montagne", "stylo" };
+            lstLexique.Items.AddRange(strArr);
+            
         }
 
+        #region Singleton
         private static Lexique singleLexique = null;
 
         public static Lexique Instance()
@@ -27,5 +31,11 @@ namespace Quinto
             }
             return singleLexique;
         }
+
+        private void Lexique_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            singleLexique = null; 
+        }
+        #endregion
     }
 }

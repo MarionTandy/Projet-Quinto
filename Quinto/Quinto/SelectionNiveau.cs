@@ -16,6 +16,8 @@ namespace Quinto
         {
             InitializeComponent();
         }
+
+        #region Singleton
         private static SelectionNiveau singleSelectionNiveau = null ; 
         public static SelectionNiveau Instance()
         {
@@ -25,11 +27,19 @@ namespace Quinto
             }
             return singleSelectionNiveau; 
         }
+        private void SelectionNiveau_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            singleSelectionNiveau = null;
+        }
+        #endregion
 
+        #region
         private void btnJouer_Click(object sender, EventArgs e)
         {
             Jeu.Instance().Show();
             Jeu.Instance().Activate();
         }
+        #endregion
+
     }
 }

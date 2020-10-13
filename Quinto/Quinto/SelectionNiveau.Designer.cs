@@ -88,6 +88,7 @@
             this.Controls.Add(this.btnJouer);
             this.Name = "SelectionNiveau";
             this.Text = "Sélectionne ton niveau !";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.SelectionNiveau_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 
