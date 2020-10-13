@@ -15,7 +15,15 @@ namespace Quinto
         private Jeu()
         {
             InitializeComponent();
+            lblEssais.Text = essaisRestants.ToString();
+            lblNbErreurs.Text = nbErreurs.ToString(); 
+           
         }
+        string MotATrouver;
+        int essaisRestants;
+        int nbErreurs; 
+
+
 
         private static Jeu singleJeu = null;
         public static Jeu Instance()
@@ -30,11 +38,18 @@ namespace Quinto
         private void bu_Click(object sender, EventArgs e)
         {
             Button button = sender as Button;
-            foreach (Char c in txtMotATrouver.Text)
+           
+            foreach (char c in MotATrouver)
             {
                 if (c.Equals(button.Text))
                 {
-                    
+                    int j = c;
+                    txtMotATrouver.Text.Replace(txtMotATrouver.Text[j], MotATrouver[c]);
+                }
+                else
+                {
+                    essaisRestants--;
+                    nbErreurs++; 
                 }
             }
         }

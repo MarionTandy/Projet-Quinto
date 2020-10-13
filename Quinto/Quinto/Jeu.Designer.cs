@@ -38,7 +38,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.lblEssaisTotaux = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.lblPoints = new System.Windows.Forms.Label();
+            this.lblNbErreurs = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.bu = new System.Windows.Forms.Button();
             this.button27 = new System.Windows.Forms.Button();
@@ -70,6 +70,8 @@
             this.button1 = new System.Windows.Forms.Button();
             this.btnManche = new System.Windows.Forms.Button();
             this.txtMotATrouver = new System.Windows.Forms.TextBox();
+            this.lblTimer = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -156,20 +158,20 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(637, 170);
+            this.label2.Location = new System.Drawing.Point(690, 170);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(35, 13);
             this.label2.TabIndex = 10;
             this.label2.Text = "points";
             // 
-            // lblPoints
+            // lblNbErreurs
             // 
-            this.lblPoints.AutoSize = true;
-            this.lblPoints.Location = new System.Drawing.Point(585, 170);
-            this.lblPoints.Name = "lblPoints";
-            this.lblPoints.Size = new System.Drawing.Size(48, 13);
-            this.lblPoints.TabIndex = 11;
-            this.lblPoints.Text = "nbPoints";
+            this.lblNbErreurs.AutoSize = true;
+            this.lblNbErreurs.Location = new System.Drawing.Point(637, 170);
+            this.lblNbErreurs.Name = "lblNbErreurs";
+            this.lblNbErreurs.Size = new System.Drawing.Size(52, 13);
+            this.lblNbErreurs.TabIndex = 11;
+            this.lblNbErreurs.Text = "nbErreurs";
             // 
             // panel1
             // 
@@ -509,15 +511,35 @@
             this.txtMotATrouver.Size = new System.Drawing.Size(295, 20);
             this.txtMotATrouver.TabIndex = 119;
             // 
+            // lblTimer
+            // 
+            this.lblTimer.AutoSize = true;
+            this.lblTimer.Location = new System.Drawing.Point(588, 169);
+            this.lblTimer.Name = "lblTimer";
+            this.lblTimer.Size = new System.Drawing.Size(33, 13);
+            this.lblTimer.TabIndex = 120;
+            this.lblTimer.Text = "Timer";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(623, 169);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(13, 13);
+            this.label4.TabIndex = 121;
+            this.label4.Text = "+";
+            // 
             // Jeu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(767, 450);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.lblTimer);
             this.Controls.Add(this.txtMotATrouver);
             this.Controls.Add(this.btnManche);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.lblPoints);
+            this.Controls.Add(this.lblNbErreurs);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lblEssaisTotaux);
             this.Controls.Add(this.label7);
@@ -547,7 +569,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label lblEssaisTotaux;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label lblPoints;
+        private System.Windows.Forms.Label lblNbErreurs;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button bu;
         private System.Windows.Forms.Button button27;
@@ -579,5 +601,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnManche;
         private System.Windows.Forms.TextBox txtMotATrouver;
+        private System.Windows.Forms.Label lblTimer;
+        private System.Windows.Forms.Label label4;
     }
 }
